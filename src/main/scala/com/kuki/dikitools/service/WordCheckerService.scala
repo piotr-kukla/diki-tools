@@ -5,15 +5,10 @@ import com.kuki.dikitools.model.Translation
 import net.ruippeixotog.scalascraper.browser.JsoupBrowser
 import net.ruippeixotog.scalascraper.dsl.DSL._
 import net.ruippeixotog.scalascraper.dsl.DSL.Extract._
-import sttp.client3._
-import sttp.client3.asynchttpclient.zio._
-import sttp.client3.circe._
 import zio.ZIO
 import zio.blocking.{Blocking, effectBlocking}
 
-import scala.io.{Codec, Source}
-
-object WordChecker {
+object WordCheckerService {
 
   val browser = JsoupBrowser()
 
