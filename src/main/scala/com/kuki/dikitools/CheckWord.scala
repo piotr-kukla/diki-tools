@@ -17,6 +17,6 @@ object CheckWord extends App {
       _    <- KnownWordsService.updateKnownWords(word, translations)
     } yield ()
 
-    program.exitCode
+    program.repeat(Schedule.forever).exitCode
   }
 }
