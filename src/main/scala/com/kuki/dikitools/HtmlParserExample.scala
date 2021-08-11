@@ -9,8 +9,10 @@ import net.ruippeixotog.scalascraper.scraper.HtmlExtractor
 
 object HtmlParserExample extends App {
 
+  //https://index.scala-lang.org/ruippeixotog/scala-scraper/scala-scraper/2.2.1?target=_2.13
+
   val browser = JsoupBrowser()
-  val doc = browser.get("https://www.diki.pl/slownik-angielskiego?q=devise")
+  val doc = browser.get("https://www.diki.pl/slownik-angielskiego?q=slack")
   val divSentences = doc >> elementList(".exampleSentence")
 
   def extractSentence(divText: String, translation: String) =
